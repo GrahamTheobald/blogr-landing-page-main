@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+$LightRed:hsl(356, 100%, 66%); // (CTA text)
+$VeryLightRed: hsl(355, 100%, 74%); //  (CTA hover background)
+$VeryDarkBlue: hsl(208, 49%, 24%); //  (headings)
+$White: hsl(0, 0%, 100%); //  (text)
+$GrayishBlue: hsl(240, 2%, 79%); //  (footer text)
+$VeryDarkGrayishBlue: hsl(207, 13%, 34%); //  (body copy)
+$VeryDarkBlackBlue: hsl(240, 10%, 16%); //  (footer background)
+
+// Background gradient - Intro/CTA mobile nav:
+$IntroGradient: linear-gradient(to bottom right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$BodyGradient: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Overpass';
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    font-size: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+}
+button.a, button.b {
+    padding: .8rem;
+    border-radius: 3rem;
+}
+button.a {
+    background-color: $White;
+    color: $LightRed;
+}
+button.b {
+    background-color: transparent;
+    color: $White;
+}
+.img-desktop {
+    display: none;
+}
+
+header {
+    background-image: url(../images/bg-pattern-intro-mobile.svg), $IntroGradient;
+    background-position: 40% 40%;
+    background-size: 300%;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    border-bottom-left-radius: 6rem;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav {
+            display: none;
+        }
+    }
+    h1 {
+        margin-top: 5rem;
+        padding: .8rem;
+        color: $White;
+    }
+    p {
+        padding: 1rem;
+        font-family: 'Overpass';
+        color: $White;
+        font-weight: 300;
+    }
+    div {
+        margin: 2rem 0rem;
+        .b {
+            margin-left: 1rem;
+            outline-width: 1px;
+            outline-color: $White;
+            outline-style: solid;
+        }
+    }
+
+}
+main {
+    .main__text {
+        text-align: center;
+        margin: 5rem 0;
+        h2 {
+            color: $VeryDarkBlue;
+            margin-bottom: 2rem;
+        }
+        &__t{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            div {
+                padding: 0 2rem;
+                h3 {
+                    padding: 0 2rem;
+                    font-size: 1.4rem;
+                    color: $VeryDarkBlue;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    font-family: 'Ubuntu';
+                    font-weight: 400;
+                    color: $VeryDarkGrayishBlue;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    .main__accent {
+        margin-top: 15rem;
+        background-image: url(../images/bg-pattern-circles.svg), $BodyGradient;
+        background-position: 50% -140%;
+        background-size: 130%;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding: 8rem 0;
+        position: relative;
+        border-top-right-radius: 6rem;
+        border-bottom-left-radius: 6rem;
+
+        .img-container {
+            // position: relative;
+            height: 50px;
+            margin-bottom: 3rem;
+            width: 100%;
+            img {
+                position: absolute;
+                top: 0;
+                translate: -50% -40%;
+            }
+        }
+        h2 {
+            padding: 0 1.5rem;
+            color: $White;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            padding: 0 2rem;
+            font-family: 'Ubuntu';
+            font-weight: 400;
+            color: $White;
+            line-height: 1.5;
+        }
+    }
+
+}
+footer {
+    background-color: $VeryDarkBlackBlue;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+    border-top-right-radius: 6rem;
+    .footer__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        &-title {
+            p {
+                color: $White;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                li {
+                    color: $GrayishBlue;
+                }
+            }
+        }
+    }
+}

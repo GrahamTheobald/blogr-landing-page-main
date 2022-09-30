@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Overpass";
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  font-size: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+button.a, button.b {
+  padding: 0.8rem;
+  border-radius: 3rem;
+}
+
+button.a {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(356deg, 100%, 66%);
+}
+
+button.b {
+  background-color: transparent;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.img-desktop {
+  display: none;
+}
+
+header {
+  background-image: url(../images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background-position: 40% 40%;
+  background-size: 300%;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-bottom-left-radius: 6rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav {
+  display: none;
+}
+header h1 {
+  margin-top: 5rem;
+  padding: 0.8rem;
+  color: hsl(0deg, 0%, 100%);
+}
+header p {
+  padding: 1rem;
+  font-family: "Overpass";
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 300;
+}
+header div {
+  margin: 2rem 0rem;
+}
+header div .b {
+  margin-left: 1rem;
+  outline-width: 1px;
+  outline-color: hsl(0deg, 0%, 100%);
+  outline-style: solid;
+}
+
+main .main__text {
+  text-align: center;
+  margin: 5rem 0;
+}
+main .main__text h2 {
+  color: hsl(208deg, 49%, 24%);
+  margin-bottom: 2rem;
+}
+main .main__text__t {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .main__text__t div {
+  padding: 0 2rem;
+}
+main .main__text__t div h3 {
+  padding: 0 2rem;
+  font-size: 1.4rem;
+  color: hsl(208deg, 49%, 24%);
+  margin-bottom: 1rem;
+}
+main .main__text__t div p {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  color: hsl(207deg, 13%, 34%);
+  line-height: 1.5;
+}
+main .main__accent {
+  margin-top: 15rem;
+  background-image: url(../images/bg-pattern-circles.svg), linear-gradient(hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+  background-position: 50% -140%;
+  background-size: 130%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 8rem 0;
+  position: relative;
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+}
+main .main__accent .img-container {
+  height: 50px;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+main .main__accent .img-container img {
+  position: absolute;
+  top: 0;
+  translate: -50% -40%;
+}
+main .main__accent h2 {
+  padding: 0 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+main .main__accent p {
+  padding: 0 2rem;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  color: hsl(0deg, 0%, 100%);
+  line-height: 1.5;
+}
+
+footer {
+  background-color: hsl(240deg, 10%, 16%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  border-top-right-radius: 6rem;
+}
+footer .footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+footer .footer__menu-title p {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+footer .footer__menu-title ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .footer__menu-title ul li {
+  color: hsl(240deg, 2%, 79%);
+}
+
+/*# sourceMappingURL=styles.css.map */
