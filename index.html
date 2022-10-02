@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | [Blogr]</title>
 </head>
 <body>
@@ -13,15 +14,18 @@
     <nav>
       <img src="./images/logo.svg" alt="logo">
       <img src="./images/icon-hamburger.svg" alt="burger" class="burger">
+      <img src="./images/icon-close.svg" alt="close" class="close hidden">
       <div class="nav">
         <ul class="nav__menu">
           <li class="nav__menu-item">
-            <p>
-              Product
+            <div class="nav__menu-item-wrapper">
+              <p>
+                Product
+              </p>
               <img src="./images/icon-arrow-dark.svg" alt="arrow" class="arrow dark">
               <img src="./images/icon-arrow-light.svg" alt="arrow" class="arrow light">
-            </p>
-            <div class="nav__menu-item-x">
+            </div>
+            <div class="nav__menu-item-x hidden">
               <ul>
                 <li>Overview</li>
                 <li>Pricing</li>
@@ -32,12 +36,14 @@
             </div>
           </li>
           <li class="nav__menu-item">
-            <p>
-              Company
-              <img src="./images/icon-arrow-dark.svg" alt="arrow" class="arrow dark">
-              <img src="./images/icon-arrow-light.svg" alt="arrow" class="arrow light">
-            </p>
-            <div class="nav__menu-item-x">
+            <div class="nav__menu-item-wrapper">
+              <p>
+                Company
+              </p>
+                <img src="./images/icon-arrow-dark.svg" alt="arrow" class="arrow dark">
+                <img src="./images/icon-arrow-light.svg" alt="arrow" class="arrow light">
+            </div>
+            <div class="nav__menu-item-x hidden">
               <ul>
                 <li>About</li>
                 <li>Team</li>
@@ -47,12 +53,14 @@
             </div>
           </li>
           <li class="nav__menu-item">
-            <p>
-              Connect
-              <img src="./images/icon-arrow-dark.svg" alt="arrow" class="arrow dark">
-              <img src="./images/icon-arrow-light.svg" alt="arrow" class="arrow light">
-            </p>
-            <div class="nav__menu-item-x">
+            <div class="nav__menu-item-wrapper">
+              <p>
+                Connect
+              </p>
+                <img src="./images/icon-arrow-dark.svg" alt="arrow" class="arrow dark">
+                <img src="./images/icon-arrow-light.svg" alt="arrow" class="arrow light">
+            </div>
+            <div class="nav__menu-item-x hidden">
               <ul>
                 <li>Contact</li>
                 <li>Newletter</li>
@@ -70,10 +78,10 @@
     <h1>
       A modern publishing platform
     </h1>
-    <p>
+    <p class="text">
       Grow your audience and build your online brand
     </p>
-    <div>
+    <div class="header_buttons">
       <button class="a">Start for Free</button>
       <button class="b">Learn More</button>
     </div>
@@ -84,8 +92,10 @@
         Designed for the future
       </h2>
       <article>
-        <img src="./images/illustration-editor-mobile.svg" alt="editor" class="img-mobile">
-        <img src="./images/illustration-editor-desktop.svg" alt="editor" class="img-desktop">
+        <div class="main__text__img">
+          <img src="./images/illustration-editor-mobile.svg" alt="editor" class="img-mobile">
+          <img src="./images/illustration-editor-desktop.svg" alt="editor" class="img-desktop">
+        </div>
         <div class="main__text__t">
           <div>
             <h3>
@@ -114,18 +124,22 @@
       <div class="img-container">
         <img src="./images/illustration-phones.svg" alt="phones">
       </div>
-      <h2>
-        State of the Art Infrastructure
-      </h2>
-      <p>
-        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-      </p>
+      <div class="text-container">
+        <h2>
+          State of the Art Infrastructure
+        </h2>
+        <p>
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
     </section>
     <section class="main__text">
       <article>
-        <img src="./images/illustration-laptop-mobile.svg" alt="laptop" class="img-mobile">
-        <img src="./images/illustration-laptop-desktop.svg" alt="laptop" class="img-desktop">
+        <div class="main__text__img">
+          <img src="./images/illustration-laptop-mobile.svg" alt="laptop" class="img-mobile">
+          <img src="./images/illustration-laptop-desktop.svg" alt="laptop" class="img-desktop">
+        </div>
         <div class="main__text__t">
           <div>
             <h3>
@@ -156,7 +170,7 @@
           Product
         </p>
         <div>
-          <ul>
+          <ul class="footer__menu-list">
             <li>Overview</li>
             <li>Pricing</li>
             <li>Marketplace</li>
@@ -170,7 +184,7 @@
           Company
         </p>
         <div>
-          <ul>
+          <ul class="footer__menu-list">
             <li>About</li>
             <li>Team</li>
             <li>Blog</li>
@@ -183,7 +197,7 @@
           Connect
         </p>
         <div>
-          <ul>
+          <ul class="footer__menu-list">
             <li>Contact</li>
             <li>Newletter</li>
             <li>LinkedIn</li>

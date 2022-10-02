@@ -49,6 +49,7 @@ header {
   background-image: url(../images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
   background-position: 40% 40%;
   background-size: 300%;
+  position: relative;
   padding: 4rem 1.5rem;
   text-align: center;
   border-bottom-left-radius: 6rem;
@@ -58,33 +59,91 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+header nav .nav.reveal {
+  display: block;
+}
 header nav .nav {
   display: none;
+  align-items: center;
+  position: absolute;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 2rem;
+  color: hsl(240deg, 10%, 16%);
+  font-weight: 600;
+  font-size: 1.2rem;
+  inset: 8rem 1rem auto 1rem;
+  border-radius: 0.5rem;
+  margin: 0;
+}
+header nav .nav .arrow.light {
+  display: none;
+}
+header nav .nav__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid hsl(0deg, 0%, 90%);
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+header nav .nav__menu-item {
+  width: 90%;
+}
+header nav .nav__menu-item-x {
+  color: hsl(207deg, 13%, 34%);
+  background-color: hsl(0deg, 0%, 90%);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+header nav .nav__menu-item-x ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1rem;
+}
+header nav .nav__menu-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+header nav .nav__menu-item-wrapper .arrow.select {
+  rotate: 180deg;
+}
+header nav .nav__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header nav .nav__login .b {
+  font-weight: 600;
+  color: hsl(240deg, 10%, 16%);
+  padding: 1rem 2rem;
+}
+header nav .nav__login .a {
+  font-weight: 600;
+  background-image: linear-gradient(to bottom right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  color: hsl(0deg, 0%, 100%);
+  padding: 1rem 2rem;
 }
 header h1 {
   margin-top: 5rem;
   padding: 0.8rem;
   color: hsl(0deg, 0%, 100%);
 }
-header p {
+header .text {
   padding: 1rem;
   font-family: "Overpass";
   color: hsl(0deg, 0%, 100%);
   font-weight: 300;
 }
-header div {
-  margin: 2rem 0rem;
-}
-header div .b {
-  margin-left: 1rem;
-  outline-width: 1px;
-  outline-color: hsl(0deg, 0%, 100%);
-  outline-style: solid;
-}
 
 main .main__text {
   text-align: center;
   margin: 5rem 0;
+  overflow: hidden;
 }
 main .main__text h2 {
   color: hsl(208deg, 49%, 24%);
@@ -175,4 +234,194 @@ footer .footer__menu-title ul li {
   color: hsl(240deg, 2%, 79%);
 }
 
-/*# sourceMappingURL=styles.css.map */
+@media screen and (min-width: 600px) {
+  .img-desktop {
+    display: block;
+  }
+  .img-mobile {
+    display: none;
+  }
+  header {
+    padding: 4rem 6rem;
+  }
+  header .burger {
+    display: none;
+  }
+  header nav {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+  }
+  header nav .nav {
+    display: block;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    inset: inherit;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  header nav .nav .arrow.dark {
+    display: none;
+  }
+  header nav .nav .arrow.light {
+    display: block;
+  }
+  header nav .nav__menu {
+    flex-direction: row;
+    border-bottom: none;
+    color: hsl(0deg, 0%, 100%);
+    margin: 0;
+    padding: 0;
+  }
+  header nav .nav__menu-item-wrapper p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  header nav .nav__menu-item {
+    position: relative;
+  }
+  header nav .nav__menu-item-x {
+    position: absolute;
+    right: -2rem;
+    padding: 2rem 4rem 2rem 2rem;
+    background-color: hsl(0deg, 0%, 100%);
+  }
+  header nav .nav__menu-item-x li:hover {
+    color: hsl(240deg, 10%, 16%);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  header nav .nav__login {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  header nav .nav__login button.a, header nav .nav__login button.b {
+    padding: 0.8rem;
+    border-radius: 3rem;
+  }
+  header nav .nav__login button.a {
+    background-image: none;
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(356deg, 100%, 66%);
+  }
+  header nav .nav__login button.a:hover, header nav .nav__login button.b:hover {
+    cursor: pointer;
+  }
+  header nav .nav__login button.a:hover {
+    background-color: hsl(355deg, 100%, 74%);
+    color: hsl(0deg, 0%, 100%);
+  }
+  header nav .nav__login button.b {
+    background-color: transparent;
+    color: hsl(0deg, 0%, 100%);
+  }
+  header h1 {
+    margin-top: 3rem;
+    font-size: 3rem;
+  }
+  header .header_buttons {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+  header .header_buttons button {
+    margin: 0 0.5rem;
+    font-weight: 600;
+  }
+  header .header_buttons button.a:hover, header .header_buttons button.b:hover {
+    cursor: pointer;
+  }
+  header .header_buttons button.a:hover {
+    background-color: hsl(355deg, 100%, 74%);
+    color: hsl(0deg, 0%, 100%);
+  }
+  header .header_buttons button.b:hover {
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(356deg, 100%, 66%);
+  }
+  main .main__text {
+    padding: 5rem 0;
+  }
+  main .main__text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+  }
+  main .main__text article {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  main .main__text article .main__text__img {
+    position: relative;
+    flex: 1;
+  }
+  main .main__text article .main__text__img img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    translate: 0 -50%;
+    max-width: 200%;
+    width: 150%;
+  }
+  main .main__text article .main__text__t {
+    flex: 1;
+    gap: 3rem;
+    padding: 0 4rem;
+  }
+  main .main__text article .main__text__t h3 {
+    padding: 0;
+  }
+  main .main__text.future article {
+    flex-direction: row-reverse;
+  }
+  main .main__text.future article .main__text__img img {
+    left: 0;
+  }
+  main .main__accent {
+    background-position: left -150px top -400px, 0 0;
+    background-size: 60%, 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    text-align: left;
+  }
+  main .main__accent .img-container {
+    flex: 1;
+  }
+  main .main__accent .img-container img {
+    width: 40%;
+    top: 50%;
+    translate: 20% -50%;
+  }
+  main .main__accent .text-container {
+    flex: 1;
+    padding-right: 4rem;
+  }
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    gap: 6rem;
+  }
+  footer .footer__menu {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  footer .footer__menu-list li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.reveal {
+  display: block;
+}/*# sourceMappingURL=styles.css.map */
